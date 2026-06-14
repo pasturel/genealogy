@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xml:lang="en-US" lang="en-US" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head dir="ltr" lang="en-US">
+	<title>My Family Tree - All Events</title>
+	<meta charset="UTF-8" />
+	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
+	<meta name ="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Gramps 6.0.8 http://gramps-project.org/" />
+	<meta name="author" content="" />
+	<meta name="robots" content="noindex" />
+	<meta name="googlebot" content="noindex" />
+	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="../../../css/ancestortree.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/Basic-Ash.css" media="screen" rel="alternate stylesheet" title="Basique - Frêne" type="text/css" />
+	<link href="../../../css/Basic-Blue.css" media="screen" rel="alternate stylesheet" title="Basique - Bleu" type="text/css" />
+	<link href="../../../css/Basic-Cypress.css" media="screen" rel="alternate stylesheet" title="Basique - Cyprès" type="text/css" />
+	<link href="../../../css/Basic-Lilac.css" media="screen" rel="alternate stylesheet" title="Basique - Lilas" type="text/css" />
+	<link href="../../../css/Basic-Peach.css" media="screen" rel="alternate stylesheet" title="Basique - Pêcher" type="text/css" />
+	<link href="../../../css/Basic-Spruce.css" media="screen" rel="alternate stylesheet" title="Basique - Épicéa" type="text/css" />
+	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Mayence" type="text/css" />
+	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Nebraska" type="text/css" />
+	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+	<link href="../../../css/narrative-maps.css" media="screen" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://openlayers.org/en/v6.15.1/build/ol.js" type="text/javascript"></script>
+	<link href="https://openlayers.org/en/v6.15.1/css/ol.css" rel="stylesheet" type="text/css" />
+	<script href="https://openlayers.org/en/v6.15.1/css/ol.css" rel="stylesheet" type="text/javascript">
+	</script>
+</head>
+<body dir="ltr">
+	<div id="outerwrapper">
+		<div class="ltr" id="header">
+			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
+			<h1 class="nav" id="SiteTitle">My Family Tree</h1>
+		</div>
+		<div class="wrappernav ltr" id="nav" role="navigation">
+			<div class="container">
+				<ul class="nav" id="dropmenu">
+					<li><a href="../../../individuals.html" title="Individus">Individus</a></li>
+					<li><a href="../../../index.html" title="Noms de famille">Noms de famille</a></li>
+					<li><a href="../../../heatmaps.html" title="Cartes thermiques">Cartes thermiques</a></li>
+					<li><a href="../../../updates.html" title="Mises à jour">Mises à jour</a></li>
+					<li class="lang">
+					Langue
+						<ul class="lang">
+							<li><a href="../../../fr/heat/s/t/AllEvents.html" style="white-space:nowrap;" title="Français">Français</a></li>
+						</ul>
+					</li>
+					<li><a onclick="history.go(-1);">Précédent</a></li>
+					<li><a onclick="history.go(+1);">Suivant</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="gototop" onclick="GoToTop()" title="Go to top">
+			<svg class="triangle" viewBox="0 0 100 100">
+				<polygon points="0,100 100,100, 50,10">
+				</polygon>
+			</svg>
+		</button>
+	
+<script>
+//Get the button
+var gototop = document.getElementById("gototop");
+
+// When the user scrolls down 200px from the top of the document,
+// show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200) {
+    gototop.style.display = "block";
+  } else {
+    gototop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function GoToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+		<div class="content" id="events">
+			<p id="description">
+			Cette section contient la carte de tous les individus avec l’évènement : All Events (Entire Database)
+			</p>
+		</div>
+		<div id="map_canvas">
+		</div>
+		<div class="ol-popup" id="popup"><a class="ol-popup-closer" href="#" id="popup-closer"></a><div class="ol-popup-title" id="popup-title"></div><div class="ol-popup-content" id="popup-content"></div></div>
+		<div class="ol-popup" id="tooltip"><div id="tooltip-content"></div></div>
+	<script deter="deter" style="width =100%; height =100%;" type="text/javascript">
+	
+  var marker_png = '../../../images/marker.png';
+
+	
+  window.addEventListener("load", function() {
+    var map;
+    var heat = 'heatmap';
+    var tracelife = [[-122.286741, 37.517556, ' <a href="../../../plc/a/d/102922bf36134510d49b42604bda.html">Ralston Hall, USA</a>', "<p><a href='../../../ppl/b/9/102921fc3e3c36b4cc3273c5919b.html' title='I0005' target='_self'>Levitt, Deborah Elanah</a>: Mariage (1989-07-02)" + "<br><a href='../../../ppl/6/1/1028bf4540c42a8498131b5df516.html' title='I0000' target='_self'>Pasturel, Pierre Xavier</a>: Mariage (1989-07-02)"],[-86.238955, 41.702589, ' <a href="../../../plc/4/c/102b2d638e224637e3ca1ac354c4.html">University of Notre Dame, USA</a>', "<p><a href='../../../ppl/6/1/1028bf4540c42a8498131b5df516.html' title='I0000' target='_self'>Pasturel, Pierre Xavier</a>: Diplôme ou certificat (1987-05)"],[-121.749117, 38.536840, ' <a href="../../../plc/3/2/102b2d90fd0e5a4e4c5f7ebc5823.html">University of California, Davis, USA</a>', "<p><a href='../../../ppl/6/1/1028bf4540c42a8498131b5df516.html' title='I0000' target='_self'>Pasturel, Pierre Xavier</a>: Diplôme ou certificat (1989-08)"],[-121.969455, 37.262864, ' <a href="../../../plc/5/3/102b2e1cf4df12b4fa5517bb5435.html">Los Gatos Community Hospital, USA</a>', "<p><a href='../../../ppl/b/8/1029220896da1bdfc2b6ef8c518b.html' title='I0006' target='_self'>Pasturel, Ciera Rose</a>: Naissance (1994-12-11)" + "<br><a href='../../../ppl/8/a/1029220e51141475373c38a20a8.html' title='I0007' target='_self'>Pasturel, Forrest Bjorn</a>: Naissance (1998-03-24)"],[-96.779980, 32.790882, ' <a href="../../../plc/0/b/102b2e62523a1f52186b8328e2b0.html">Baylor University Medical Center</a>', "<p><a href='../../../ppl/6/1/1028bf4540c42a8498131b5df516.html' title='I0000' target='_self'>Pasturel, Pierre Xavier</a>: Naissance (1965-11-12)"],[-121.881051, 37.334030, ' <a href="../../../plc/0/5/102b5ec909da56d811a4f0634750.html">San Jose State University, USA</a>', "<p><a href='../../../ppl/6/1/1028bf4540c42a8498131b5df516.html' title='I0000' target='_self'>Pasturel, Pierre Xavier</a>: Niveau d'instruction (2019-05)"],[-122.146094, 37.450255, ' <a href="../../../plc/4/4/10333ab97bbb280f0930c55d3b44.html">Palo Alto, USA</a>', "<p><a href='../../../ppl/8/8/10333a9781276c8d656bde836888.html' title='I0013' target='_self'>Pasturel, Jean Yves Léon</a>: Décès (1998-04-09)" + "<br><a href='../../../ppl/f/5/10333acda81d8c5e60cb3c705f.html' title='I0014' target='_self'>Viguier, Gilberte Lucette Henriette Anasthasie</a>: Décès"],[2.455456, 43.936259, ' <a href="../../../plc/0/e/10333b1447d477c37560793de1e0.html">St. Andre, France</a>', "<p><a href='../../../ppl/b/9/102921fc3e3c36b4cc3273c5919b.html' title='I0005' target='_self'>Levitt, Deborah Elanah</a>: Fiançailles (1987-08-02)" + "<br><a href='../../../ppl/6/1/1028bf4540c42a8498131b5df516.html' title='I0000' target='_self'>Pasturel, Pierre Xavier</a>: Fiançailles (1987-08-02)"],[3.212241, 43.346180, ' <a href="../../../plc/3/d/10333b7167c5193687704323e5d3.html">Beziers, France</a>', "<p><a href='../../../ppl/f/4/10333b59044d4779a699f623384f.html' title='I0017' target='_self'>Pasturel, Patrice</a>: Décès (1970)" + "<br><a href='../../../ppl/f/c/10333b8ed69d6b0ec0bd8057b5cf.html' title='I0018' target='_self'>Pasturel, Henri</a>: Naissance (1929)" + "<br><a href='../../../ppl/f/c/10333b8ed69d6b0ec0bd8057b5cf.html' title='I0018' target='_self'>Pasturel, Henri</a>: Décès (1994)" + "<br><a href='../../../ppl/8/d/10333bb2a5491e7bee5cbb654bd8.html' title='I0020' target='_self'>Pasturel, Louis</a>: Naissance (1931)" + "<br><a href='../../../ppl/a/a/10333bbc0b357763e9e074bcadaa.html' title='I0021' target='_self'>Pasturel, Patrice Fernand</a>: Naissance (1935)" + "<br><a href='../../../ppl/6/d/10333bc6f42e456e01bb99b93ad6.html' title='I0022' target='_self'>Pasturel, Renée</a>: Naissance (1947-01-27)" + "<br><a href='../../../ppl/d/0/10336a7c149820c699b71ed1750d.html' title='I0029' target='_self'>Pillon, Anne-Marie</a>: Naissance (1931-01)" + "<br><a href='../../../ppl/d/1/1033c6a5122848c726ec97c92e1d.html' title='I0212' target='_self'>Lingeri, Patrick</a>: Naissance (1950-12-22)"],[4.358314, 43.834809, ' <a href="../../../plc/2/0/10333baf7e8644abe9887fc34202.html">Nimes, France</a>', "<p><a href='../../../ppl/1/4/10333ba3c472197dbc9dad346741.html' title='I0019' target='_self'>Clapier, Paulette</a>: Décès (1997-01-01)"],[2.440032, 43.881483, ' <a href="../../../plc/2/e/10336c32873945f12d9ab88d9ee2.html">Le Fraysse, France</a>', "<p><a href='../../../ppl/0/2/10336c0ede6a14f519cb2a3f2420.html' title='I0061' target='_self'>Puech, Albert</a>: Naissance (1915)"],[2.601522, 44.294785, ' <a href="../../../plc/0/0/10336c73b0f97869acdd78a5fb00.html">Aveyron, France</a>', "<p><a href='../../../ppl/0/9/10336c6986082e674723b20ffe90.html' title='I0065' target='_self'>Seryès, Marilyn</a>: Naissance"],[2.575498, 43.844760, ' <a href="../../../plc/6/5/1033733ae51c164eec8623c8ce56.html">Montfranc, France</a>', "<p><a href='../../../ppl/7/3/103373214fd51f4d6e2eebf23837.html' title='I0074' target='_self'>Bénézeth, Philomène</a>: Naissance (1844)" + "<br><a href='../../../ppl/6/a/1033af3ff4a57436cff3d3e52fa6.html' title='I0163' target='_self'>Bénézeth, Louis</a>: Naissance" + "<br><a href='../../../ppl/c/7/1033c36673c671391481fd60a67c.html' title='I0186' target='_self'>Pasturel, Antoine Patrice</a>: Naissance (1816-03-04)"],[2.361296, 43.661922, ' <a href="../../../plc/7/4/10339951f30b2428b9e737c71747.html">Lacrouzette, France</a>', "<p><a href='../../../ppl/9/d/1033994941af38d7a500f2a4d3d9.html' title='I0136' target='_self'>Bardy, Julie</a>: Naissance (1987-02-05)" + "<br><a href='../../../ppl/4/3/1033995464df1ea87cfe6ba05b34.html' title='I0137' target='_self'>Bardy, Thomas</a>: Naissance (1988-08-10)"],[2.003988, 43.458779, ' <a href="../../../plc/6/6/10339972b7763ad8bee45df2166.html">Revel, France</a>', "<p><a href='../../../ppl/e/3/1033996839047241f8dc6f34793e.html' title='I0139' target='_self'>Bardy, Louis</a>: Naissance (1990-03-20)"],[1.096508, 49.442893, ' <a href="../../../plc/a/a/1033999525886ecff0aa48383faa.html">Rouen, France</a>', "<p><a href='../../../ppl/0/f/103399866b0748f2b047b348acf0.html' title='I0142' target='_self'>Bardy, Julien</a>: Naissance (1988-12-31)"],[-94.980517, 29.768450, ' <a href="../../../plc/b/0/10339b2dde6c6905379bcb0e5a0b.html">Baytown, Texas, USA</a>', "<p><a href='../../../ppl/b/f/10339b1647853b7b6ecd8be882fb.html' title='I0154' target='_self'>Contreras, John Thomas</a>: Naissance (1960-03-21)"],[-121.946650, 37.251876, ' <a href="../../../plc/2/6/10339b3a1f543bbc7c58301d9762.html">San Jose, CA, USA</a>', "<p><a href='../../../ppl/9/2/10339b2f076770b21a474015c329.html' title='I0155' target='_self'>Contreras, Erik Hans</a>: Naissance (1991-09-14)" + "<br><a href='../../../ppl/0/6/10339b3e15eb704e0ded5a298b60.html' title='I0156' target='_self'>Contreras, Sarah Kristin</a>: Naissance (1994-08-08)"],[-121.922361, 36.541600, ' <a href="../../../plc/7/2/10339b6741f33b08ba84b2723f27.html">Carmel, CA, USA</a>', "<p><a href='../../../ppl/b/8/1029220896da1bdfc2b6ef8c518b.html' title='I0006' target='_self'>Pasturel, Ciera Rose</a>: Mariage (2025-06-21)" + "<br><a href='../../../ppl/0/8/10339b4dee2129a19a767bcf4a80.html' title='I0157' target='_self'>Asin, Samuel Abraham</a>: Mariage (2025-06-21)"],[10.658860, 59.434092, ' <a href="../../../plc/2/e/10339bb5112413103ba049c9fee2.html">Moss, Norway</a>', "<p><a href='../../../ppl/d/a/1028f223da156e7c98973ec8cdad.html' title='I0002' target='_self'>Bråten, Ragni Elise</a>: Naissance (1940-08-26)"],[4.889229, 45.771926, ' <a href="../../../plc/7/b/10339bbff1f52befd353b97205b7.html">Villeurbanne (Lyon), France</a>', "<p><a href='../../../ppl/d/a/1028f223da156e7c98973ec8cdad.html' title='I0002' target='_self'>Bråten, Ragni Elise</a>: Mariage (1962-12-17)"],[-119.643603, 34.416872, ' <a href="../../../plc/0/e/10339c22f5574a9bb16d282e90e0.html">Montecito, CA, USA</a>', "<p><a href='../../../ppl/c/6/10339c126f23488853effd880b6c.html' title='I0158' target='_self'>Cotter, Beverly</a>: Fiançailles (2026-04-11)" + "<br><a href='../../../ppl/8/a/1029220e51141475373c38a20a8.html' title='I0007' target='_self'>Pasturel, Forrest Bjorn</a>: Fiançailles (2026-04-11)"],[11.085168, 59.287511, ' <a href="../../../plc/e/a/1033b0ae88e269b54ec69c0c3fae.html">Sarpsborg, Norway</a>', "<p><a href='../../../ppl/6/2/1033b094a45a41283d39ff8daf26.html' title='I0167' target='_self'>Braathen, Ole</a>: Naissance (1885)"],[10.864093, 59.351959, ' <a href="../../../plc/7/a/1033b0c3af3c55a21cc0058291a7.html">Råde, Norway</a>', "<p><a href='../../../ppl/5/e/1033b0b8df7c49f4b543bb7449e5.html' title='I0168' target='_self'>Roberstsen, Ragna</a>: Naissance (1886)" + "<br><a href='../../../ppl/b/4/1033c1afb6056967d1fcfd3b7a4b.html' title='I0171' target='_self'>Robertsen, Ragna</a>: Naissance (1886)"],[10.756086, 59.379427, ' <a href="../../../plc/4/1/1033c23fdac35aac6e24a5f1e614.html">Rygge, Norway</a>', "<p><a href='../../../ppl/a/f/10322e7091a945e6cc751138e9fa.html' title='I0012' target='_self'>Olsen-Bye, Ruth</a>: Naissance (1914)" + "<br><a href='../../../ppl/5/2/1033c26b9db82864eaabc468be25.html' title='I0177' target='_self'>Johansen, Elise</a>: Naissance (1880)"],[12.031692, 59.289974, ' <a href="../../../plc/3/a/1033c2542430d87961f66ecf4a3.html">Blomskog, Sweden</a>', "<p><a href='../../../ppl/c/2/1033c244f3dd844e6b568dd102c.html' title='I0176' target='_self'>Olsen-Bye, Fredrick</a>: Naissance (1857)"],[2.821070, 46.095029, ' <a href="../../../plc/b/5/1033c613a1303c207828dfb73f5b.html">Teilhet, France</a>', "<p><a href='../../../ppl/e/b/1033c5ff772f2042f4ef47545bbe.html' title='I0203' target='_self'>Régy, Marie Eugenie</a>: Naissance (1874-03-22)"],[2.168806, 43.899133, ' <a href="../../../plc/0/c/1033c62ce5116096c5d34bc094c0.html">Puygouzon, France</a>', "<p><a href='../../../ppl/1/1/1033c6190c024017c32b33cb0411.html' title='I0204' target='_self'>Rahoux, François Emile Milou</a>: Naissance (1870-06-25)" + "<br><a href='../../../ppl/1/1/1033c6190c024017c32b33cb0411.html' title='I0204' target='_self'>Rahoux, François Emile Milou</a>: Décès (1936-08-09)" + "<br><a href='../../../ppl/1/5/1033c654c37dbee0813ede78251.html' title='I0206' target='_self'>Rahoux, Alice</a>: Naissance (1897-08-02)" + "<br><a href='../../../ppl/b/6/1033c66b1866239f6e7af1d3456b.html' title='I0207' target='_self'>Carrausse, Louis</a>: Mariage (1924-10-21)" + "<br><a href='../../../ppl/1/5/1033c654c37dbee0813ede78251.html' title='I0206' target='_self'>Rahoux, Alice</a>: Mariage (1924-10-21)"],[2.149489, 43.925057, ' <a href="../../../plc/4/7/1033c667303586bac38bb728b74.html">Albi, France</a>', "<p><a href='../../../ppl/1/5/1033c654c37dbee0813ede78251.html' title='I0206' target='_self'>Rahoux, Alice</a>: Décès (1996-05-24)" + "<br><a href='../../../ppl/f/7/1033c66edc4a31fd4cb2fbaf8d7f.html' title='I0208' target='_self'>Carrausse, Marie-Thérèse</a>: Naissance (1926-10-24)" + "<br><a href='../../../ppl/b/e/1033c67cb2372883b00fa91af3eb.html' title='I0209' target='_self'>Dupuy, Pierre</a>: Naissance (1922-09-15)" + "<br><a href='../../../ppl/b/e/1033c67cb2372883b00fa91af3eb.html' title='I0209' target='_self'>Dupuy, Pierre</a>: Décès (1991-11-18)" + "<br><a href='../../../ppl/4/8/1033c68a39f8312ed228c65a6984.html' title='I0210' target='_self'>Dupuy, Catherine</a>: Naissance (1951-08-28)" + "<br><a href='../../../ppl/b/e/1033c6937dd63a5fe3ab2880b7eb.html' title='I0211' target='_self'>Dupuy, Frédérique</a>: Naissance (1963-12-07)" + "<br><a href='../../../ppl/b/6/1033c66b1866239f6e7af1d3456b.html' title='I0207' target='_self'>Carrausse, Louis</a>: Naissance (1898-05-17)" + "<br><a href='../../../ppl/b/6/1033c66b1866239f6e7af1d3456b.html' title='I0207' target='_self'>Carrausse, Louis</a>: Décès (1960-03-06)" + "<br><a href='../../../ppl/b/e/1033c67cb2372883b00fa91af3eb.html' title='I0209' target='_self'>Dupuy, Pierre</a>: Mariage (1948-04-15)" + "<br><a href='../../../ppl/f/7/1033c66edc4a31fd4cb2fbaf8d7f.html' title='I0208' target='_self'>Carrausse, Marie-Thérèse</a>: Mariage (1948-04-15)" + "<br><a href='../../../ppl/6/5/1033c725d5042353190ff8aa0c56.html' title='I0216' target='_self'>Carrausse, Frédéric</a>: Décès (1931-03-15)" + "<br><a href='../../../ppl/f/6/1033c73d53e87ddfb8fe67f5586f.html' title='I0217' target='_self'>Galtier, Maria</a>: Décès (1941-08-04)"],[1.484266, 43.657652, ' <a href="../../../plc/2/b/1033c6c388bc2ff29ec9201b64b2.html">L\'Union (Toulouse), France</a>', "<p><a href='../../../ppl/d/a/1033c6b299b14167eb3ade5745ad.html' title='I0213' target='_self'>Lingeri-Dupuy, Élodie</a>: Naissance (1981-02-15)"],[4.154724, 48.843973, ' <a href="../../../plc/9/6/1033c6d4d8385233631172be6b69.html">Champagne, France</a>', "<p><a href='../../../ppl/0/5/1033c6c95aec393bf488672d3350.html' title='I0214' target='_self'>Courant, Christian</a>: Naissance (1946-01-20)"],[2.351833, 48.855927, ' <a href="../../../plc/2/1/1033c6df4751422ee30d36667712.html">Paris, France</a>', "<p><a href='../../../ppl/7/0/1033c6d7d55f4c353e80a131fd07.html' title='I0215' target='_self'>Courant, Pierre</a>: Naissance (1996-03-09)" + "<br><a href='../../../ppl/4/8/1033c68a39f8312ed228c65a6984.html' title='I0210' target='_self'>Dupuy, Catherine</a>: Mariage (1978-04-05)" + "<br><a href='../../../ppl/d/1/1033c6a5122848c726ec97c92e1d.html' title='I0212' target='_self'>Lingeri, Patrick</a>: Mariage (1978-04-05)"],[2.576017, 44.349436, ' <a href="../../../plc/3/2/1033c730747362aa661577578823.html">Rodez, France</a>', "<p><a href='../../../ppl/6/5/1033c725d5042353190ff8aa0c56.html' title='I0216' target='_self'>Carrausse, Frédéric</a>: Naissance (1857-04-15)"],[2.515808, 45.015127, ' <a href="../../../plc/0/5/1033c758a7431388aa6a11423850.html">Laroquevieille, France</a>', "<p><a href='../../../ppl/f/6/1033c73d53e87ddfb8fe67f5586f.html' title='I0217' target='_self'>Galtier, Maria</a>: Naissance (1867-11-16)"],[2.342369, 44.198573, ' <a href="../../../plc/e/b/1033c775c5642c2b8ccfb858b7be.html">Naucelle, France</a>', "<p><a href='../../../ppl/c/3/1033c765f7ff76cada524d73583c.html' title='I0218' target='_self'>Carrausse, Frédéric or François</a>: Naissance (1821)"],];
+    var iconStyle = new ol.style.Style({
+      image: new ol.style.Icon(({
+        anchor: [0.2, 48],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'pixels',
+        opacity: 1.0,
+        src: marker_png
+      }))
+    });
+    var markerSource = new ol.source.Vector({
+    });
+    var centerCoord = new ol.proj.transform([-22.338766552031267, 44.32664790265627], 'EPSG:4326', 'EPSG:3857');
+    var zoom = 4;
+    var radius = 8;
+    var blur = 15;
+    for (var i = 0; i < tracelife.length; i++) {
+      var loc = tracelife[i];
+      var iconFeature = new ol.Feature({
+       geometry: new ol.geom.Point(ol.proj.transform([loc[0], loc[1]],
+                                                     'EPSG:4326', 'EPSG:3857')),
+       name: loc[2],
+       data: loc[3],
+      });
+      iconFeature.setStyle(iconStyle);
+      markerSource.addFeature(iconFeature);
+    }
+    markerLayer = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    tooltip = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    heatmap = new ol.layer.Heatmap({
+      source: markerSource,
+      radius: radius,
+      blur: blur,
+      style: iconStyle
+    });
+    if (heat == "heatmap") {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            heatmap],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    } else {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            markerLayer, tooltip],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    };
+
+	
+    var element = document.getElementById('popup');
+    var content = document.getElementById('popup-content');
+    var ptitle = document.getElementById('popup-title');
+    var closer = document.getElementById('popup-closer');
+    var tip = document.getElementById('tooltip');
+    var tipcontent = document.getElementById('tooltip-content');
+    var tltip1 = undefined;
+    var tltip2 = undefined;
+    var tooltip = new ol.Overlay({
+      element: tip,
+      positioning: 'bottom-center',
+      offset: [10, 0],
+    });
+    map.addOverlay(tooltip);
+    var popup = new ol.Overlay({
+      element: element,
+      positioning: 'bottom-center',
+      autoPan: true,
+      autoPanAnimation: { duration: 500 },
+      stopEvent: true
+    });
+    map.addOverlay(popup);
+    /**
+     * Add a click handler to hide the popup.
+     * @return {boolean} Don't follow the href.
+     */
+    closer.onclick = function() {
+      popup.setPosition(undefined);
+      closer.blur();
+      tltip1 = undefined;
+      tltip2 = undefined;
+      return false;
+    };
+    map.on('pointermove', function(evt) {
+      evt.preventDefault()
+      if (tltip2 !== undefined) {
+        return;
+      }
+      var feature = this.forEachFeatureAtPixel(evt.pixel,
+                                               function(feature, layer) {
+        tltip1 = feature;
+        return feature;
+      });
+      map.getTargetElement().style.cursor = feature ? 'pointer' : '';
+      if (evt.dragging) {
+        tooltip.setPosition(undefined);
+        return;
+      }
+      if (feature) {
+        var coordinate = evt.coordinate;
+        tipcontent.innerHTML = feature.get('name');
+        tooltip.setPosition(coordinate);
+      } else {
+        tooltip.setPosition(undefined);
+      }
+    });
+    map.on('singleclick', function(evt) {
+      evt.preventDefault();
+      if (tltip1 !== undefined) {
+        tooltip.setPosition(undefined);
+      }
+      var feature = map.forEachFeatureAtPixel(evt.pixel,
+                                              function(feature, layer) {
+        tltip2 = feature;
+        return feature;
+      });
+      if (feature) {
+      var coordinate = evt.coordinate;
+      var title = '<h2>' + feature.get('name') + '</h2>';
+      ptitle.innerHTML = title;
+      content.innerHTML = feature.get('data');
+      popup.setPosition(coordinate);
+      }
+      });
+  });
+
+	</script>
+		<div class="fullclear"></div>
+		<div id="footer">
+			<p id="createdate">
+			Généré par <a href="http://gramps-project.org/">Gramps</a> 6.0.8 le 2026-06-14
+			</p>
+			<p id="copyright">
+			
+			</p>
+		</div>
+	</div>
+</body>
+</html>
